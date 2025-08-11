@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%               -- Template for Declaration of Originality --
+
+% Please insert your name, place and format of the date in the two variables 
+% below:
+
+\def\name{NAME}
+\def\place{PLACE}
+\def\dateformat{1} % 1 - 3
+
+% 1: November 21, 2025
+% 2: 21^st November, 2025
+% 3: November, 2025
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\monthname{
+  \ifcase\month
+    \or January
+    \or February
+    \or March
+    \or April
+    \or May
+    \or June
+    \or July
+    \or August
+    \or September
+    \or October
+    \or November
+    \or December
+  \fi
+}
+
+\def\daysuffix{
+  \ifcase\day
+  \or st 
+  \or nd 
+  \or rd 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or st 
+  \or nd 
+  \or rd 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or th 
+  \or st 
+  \fi
+}
+
+\def\specdate{
+  \ifcase\dateformat
+     {\leavevmode\hbox{\monthname\,\the\day,\,\the\year}}
+    \or {\leavevmode\hbox{\monthname\,\the\day,\,\the\year}}
+    \or {\leavevmode\hbox{\the\day\textsuperscript{\daysuffix}\,\monthname,\,\the\year}}
+    \or {\leavevmode\hbox{\monthname,\,\the\year}}
+  \fi
+}
+
+\newpage
+\thispagestyle{empty}
+\sffamily
+\hspace{0pt}
+\vfill
+\begin{center}
+\bfseries \large Declaration of Originality
+\end{center}\vspace{3mm}
+
+\noindent I, \name, hereby confirm
+that I am the sole author of this work
+and have used only approved and referenced materials and aids.
+Any elements in this work
+\begin{itemize}
+    \setlength{\itemsep}{0.5pt}
+    \item that have originated from the work of others,
+    \item that were the results of a training, apprenticeship or assignment
+    \item that were created in collaboration with others
+\end{itemize}
+
+\noindent have been properly cited in the original work.
+\vspace{2cm}
+
+\begin{centering}
+\begin{tabular}{lc}
+\place, \specdate \hspace*{1.8cm} & \underline{\hspace{6cm}} \\
+& \name
+\end{tabular}
+\end{centering}
+
+\vfill
+\hspace{0pt}
+\newpage
